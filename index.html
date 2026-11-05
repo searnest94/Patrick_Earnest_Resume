@@ -1,261 +1,217 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Patrick Earnest — Cybersecurity Resume</title>
-  <meta name="description" content="Resume for Patrick Earnest — emerging cybersecurity professional with hands-on labs, USMC background, Windows/Linux admin, networking, and security operations skills." />
-  <meta property="og:title" content="Patrick Earnest — Cybersecurity Resume" />
-  <meta property="og:description" content="Emerging cybersecurity professional with hands-on labs, USMC background, and security operations skills." />
-  <meta property="og:type" content="website" />
-  <style>
-    :root{
-      --bg:#0b0c10; /* dark base for dark mode */
-      --panel:#111217;
-      --text:#e8ebf1;
-      --muted:#a8b0bf;
-      --accent:#6fb1ff;
-      --accent-2:#9ae6b4;
-      --border:#242734;
-      --print-text:#000;
-      --print-bg:#fff;
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f6f7fb; --panel:#ffffff; --text:#0f172a; --muted:#475569; --accent:#0ea5e9; --border:#e5e7eb; }
-    }
-    *{ box-sizing:border-box }
-    html,body{ margin:0; height:100%; background:var(--bg); color:var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
-    a{ color:var(--accent); text-decoration: none }
-    a:hover{ text-decoration: underline }
-    .wrap{ max-width: 900px; margin: 0 auto; padding: 24px; }
-    header{ position:sticky; top:0; background:linear-gradient(180deg, var(--bg), transparent 70%); padding-top:16px; z-index:10 }
-    .card{ background: var(--panel); border:1px solid var(--border); border-radius:20px; padding:24px; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
-    .top{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content: space-between; }
-    h1{ font-size: clamp(28px, 4vw, 40px); margin: 0 0 4px 0 }
-    .sub{ color:var(--muted) }
-    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px }
-    .chip{ border:1px solid var(--border); padding:6px 10px; border-radius:999px; color:var(--muted) }
-    nav{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px }
-    nav a{ background: transparent; border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:14px }
-    .actions{ display:flex; gap:10px; flex-wrap:wrap; }
-    button{ border:1px solid var(--border); background:transparent; color:var(--text); border-radius:12px; padding:8px 12px; cursor:pointer }
-    button:hover{ background: rgba(255,255,255,.05) }
-
-    section{ margin: 24px 0 }
-    h2{ font-size: clamp(18px, 2.2vw, 22px); margin:0 0 10px 0 }
-    .section{ padding: 20px; border:1px solid var(--border); border-radius:16px; background: var(--panel) }
-    .grid{ display:grid; gap:14px }
-    .grid.two{ grid-template-columns: 1fr; }
-    @media (min-width: 760px){ .grid.two{ grid-template-columns: 1fr 1fr } }
-
-    .item h3{ margin:0; font-size: 18px }
-    .item .meta{ color:var(--muted); font-size:14px }
-    ul{ margin:8px 0 0 18px }
-    li{ margin:6px 0 }
-    .kicker{ color:var(--muted); text-transform: uppercase; letter-spacing:.08em; font-size:12px }
-
-    footer{ color:var(--muted); margin-top:24px; text-align:center }
-
-    /* Print styles */
-    @media print {
-      body{ background: var(--print-bg); color:var(--print-text) }
-      .card, .section{ box-shadow:none; border-color:#ddd; background:#fff }
-      header{ position:static; background:#fff }
-      nav, .actions, .chips{ display:none }
-      a{ color:#000; text-decoration: none }
-      .wrap{ padding:0 }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shawn Earnest’s portfolio featuring IT support, cybersecurity, and hands-on projects.">
+<title>Shawn Earnest | IT &amp; Cybersecurity</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a1119;
+    --panel: #101c28;
+    --line: #2a3e50;
+    --text: #eff6fb;
+    --muted: #b4c4d3;
+    --mint: #83f5ce;
+    --mono: ui-monospace, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.65 system-ui, sans-serif; }
+  a { color: inherit; text-underline-offset: .24em; }
+  a:hover { color: var(--mint); }
+  a:focus-visible { outline: 2px solid var(--mint); outline-offset: 5px; }
+  .wrap { width: min(1080px, calc(100% - 2.5rem)); margin-inline: auto; }
+  .skip { position: absolute; z-index: 2; top: .5rem; left: .5rem; padding: .5rem 1rem; background: var(--bg); transform: translateY(-160%); }
+  .skip:focus { transform: none; }
+  header { border-bottom: 1px solid var(--line); }
+  .bar { min-height: 4.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem 2rem; padding-block: .75rem; }
+  .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font-weight: 700; }
+  .mark { color: var(--mint); border: 1px solid var(--line); border-radius: .4rem; padding: .2rem .45rem; font: .85rem/1.5 var(--mono); }
+  nav { display: flex; flex-wrap: wrap; gap: .45rem 1.25rem; }
+  nav a { color: var(--muted); text-decoration: none; font-size: .9rem; }
+  .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(1.5rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(3.5rem, 9vw, 7rem); }
+  .label { margin: 0 0 .75rem; color: var(--mint); font: .78rem/1.5 var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+  h1, h2, h3 { margin: 0; line-height: 1.12; }
+  h1 { font-size: clamp(3.2rem, 8vw, 6.4rem); letter-spacing: -.075em; }
+  h2 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.045em; }
+  h3 { font-size: 1.18rem; }
+  p { margin: .8rem 0 0; color: var(--muted); }
+  .intro { margin-top: 1.35rem; max-width: 35rem; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+  .button { display: inline-block; margin-top: 1.5rem; padding: .66rem 1rem; background: var(--mint); color: #071a14; border-radius: .4rem; font-weight: 750; text-decoration: none; }
+  .button:hover { background: #b8ffe5; color: #071a14; }
+  .actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.5rem; }
+  .actions .button { margin: 0; }
+  .actions .secondary { color: var(--mint); background: transparent; border: 1px solid var(--line); }
+  .project-detail, details { margin-top: 1.25rem; }
+  summary { cursor: pointer; color: var(--mint); }
+  summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; }
+  .graphic { margin: 0; background: radial-gradient(ellipse at 55% 48%, #17413d, #101c28 72%); border: 1px solid var(--line); border-radius: .8rem; overflow: hidden; }
+  .graphic svg { width: 100%; height: auto; display: block; }
+  .graphic figcaption { padding: .75rem 1rem; border-top: 1px solid var(--line); color: var(--muted); font: .75rem/1.5 var(--mono); }
+  section + section { border-top: 1px solid var(--line); }
+  .section { padding-block: clamp(2.75rem, 6vw, 5rem); }
+  .split { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1.25rem 3rem; }
+  .split p:first-child { margin-top: 0; }
+  .feature { display: grid; grid-template-columns: 1fr 1.25fr; gap: 1.3rem 2rem; margin-top: 1.5rem; padding: clamp(1.2rem, 4vw, 2.25rem); border: 1px solid var(--line); border-left: 3px solid var(--mint); background: var(--panel); border-radius: .65rem; }
+  .feature h3 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); }
+  .list { margin: 0; padding-left: 1.15rem; color: var(--muted); }
+  .list li + li { margin-top: .55rem; }
+  .list li::marker { color: var(--mint); }
+  .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.25rem; }
+  .card { padding: 1.25rem; border: 1px solid var(--line); border-radius: .65rem; }
+  .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
+  footer { border-top: 1px solid var(--line); }
+  footer .bar { color: var(--muted); font-size: .88rem; }
+  @media (max-width: 720px) {
+    .hero, .split, .feature { grid-template-columns: 1fr; }
+    .graphic { max-width: 28rem; }
+    .skills { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) { .projects { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="card">
-        <div class="top">
-          <div>
-            <h1>Patrick Earnest</h1>
-            <div class="sub">Waynesboro, GA • <a href="mailto:pvtpsearnest@gmail.com">pvtpsearnest@gmail.com</a> • <a href="tel:+17064145028">706‑414‑5028</a></div>
-            <div class="chips">
-              <span class="chip">Portfolio: <a href="projects/">Portfolio</a>
-            </div>
-          </div>
-          <div class="actions">
-            <button onclick="window.print()" aria-label="Print or save to PDF">Print / Save PDF</button>
-            <button id="themeBtn" aria-label="Toggle light/dark theme">Toggle Theme</button>
-          </div>
-        </div>
-        <nav aria-label="Sections">
-          <a href="#summary">Summary</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#military">Military</a>
-          <a href="#additional">Additional</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section id="summary">
-        <div class="section">
-          <div class="kicker">Professional Summary</div>
-          <p>Emerging cybersecurity professional with hands‑on academic lab experience and a background in the U.S. Marine Corps and emergency services. Strong foundation in Windows/Linux administration, network fundamentals, and security best practices (MFA, patching, least privilege). Known for calm, accountable performance under pressure, clear documentation, and teamwork. Seeking an entry‑level IT/cyber role where I can contribute to secure operations and grow into security operations or systems administration.</p>
-        </div>
-      </section>
-
-      <section id="skills">
-        <div class="section grid two">
-          <div class="item">
-            <h3>Networking</h3>
-            <ul>
-              <li>TCP/IP, DNS, DHCP, VLANs, VPN, Wi‑Fi security</li>
-              <li>Basic subnetting, packet capture &amp; analysis (Wireshark)</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>Systems &amp; Admin</h3>
-            <ul>
-              <li>Windows 10/11, Windows Server, AD &amp; Group Policy</li>
-              <li>Basic Linux, endpoint hardening</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>Security Operations</h3>
-            <ul>
-              <li>Log review &amp; triage, incident response steps</li>
-              <li>Vulnerability scanning (Nessus/OpenVAS), patch management</li>
-              <li>Least privilege, MFA</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>Cloud &amp; M365</h3>
-            <ul>
-              <li>Entra ID/Azure AD basics, Microsoft 365 user &amp; group admin</li>
-              <li>Conditional Access/MFA, Intune onboarding</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>Tools &amp; Scripting</h3>
-            <ul>
-              <li>Wireshark, Nmap, Splunk/Microsoft Sentinel (basics)</li>
-              <li>PowerShell, Bash, Python (beginner), Sysinternals</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="education">
-        <div class="section">
-          <div class="kicker">Education</div>
-          <p><strong>Associate of Science, Cybersecurity</strong> — Southern New Hampshire University (Completed July 2025)</p>
-          <p><strong>Bachelor of Science, Cybersecurity</strong> — Southern New Hampshire University (In Progress, Expected September 2026)</p>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="section">
-          <div class="kicker">Academic &amp; Lab Projects</div>
-          <ul>
-            <li><strong>Active Directory Hardening</strong> — Implemented password/MFA policies, least‑privilege groups, and audit settings; validated via log review in Event Viewer and basic SIEM queries.</li>
-            <li><strong>Network Segmentation (Packet Tracer/GNS3)</strong> — Designed multi‑VLAN topology with inter‑VLAN routing and ACLs; tested isolation with ping/traceroute and captured traffic in Wireshark.</li>
-            <li><strong>Vulnerability Scan &amp; Patch Cycle</strong> — Ran baseline Nessus/OpenVAS scan on sample hosts, prioritized findings, and documented remediation plan and retest results.</li>
-            <li><strong>M365 Tenant Setup (Academic)</strong> — Provisioned users, enforced MFA with Conditional Access, configured basic device compliance and email security settings.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="experience">
-        <div class="section">
-          <div class="kicker">Professional Experience</div>
-          
-          <div class="item">
-            <h3>IT Lead — Wingate Massage • Augusta, GA</h3>
-            <div class="meta">Mar 2024 – Present</div>
-            <ul>
-              <li>Own day-to-day IT: Microsoft 365/Entra ID admin, user provisioning, MFA rollout, and shared mailbox setup.</li>
-              <li>Maintain Square website & booking: DNS/SSL, content updates, role-based access, and basic SEO/accessibility checks.</li>
-              <li>Endpoint & network: Intune onboarding, Windows hardening, update/patch cadence, Wi‑Fi security, and router/firewall rules.</li>
-              <li>Security ops: phishing-awareness refreshers, password policy, backup/restore tests, and incident documentation playbooks.</li>
-              <li>Support & tooling: ticket triage, remote support, asset inventory, and vendor coordination.</li>
-            </ul>
-          </div>
-<div class="item">
-            <h3>Correctional Officer — Augusta State Medical Prison • Augusta, GA</h3>
-            <div class="meta">Feb 2020 – Jan 2021</div>
-            <ul>
-              <li>Enforced security protocols and access control; produced complete incident reports.</li>
-              <li>Applied de‑escalation and crisis‑management techniques to maintain safety.</li>
-              <li>Coordinated with multidisciplinary teams to resolve issues under time pressure.</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>Groundman — Chain Electric • Vancleave, MS</h3>
-            <div class="meta">Nov 2018 – Dec 2019</div>
-            <ul>
-              <li>Supported line crews with site setup, tool operation, and safety checks.</li>
-              <li>Maintained rigorous PPE/safety compliance and accurate equipment records.</li>
-              <li>Assisted material handling and communications to keep projects moving.</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>EMT‑B — Gold Cross EMS • Augusta, GA</h3>
-            <div class="meta">Nov 2017 – Oct 2018</div>
-            <ul>
-              <li>Delivered BLS care and communicated patient status under time pressure.</li>
-              <li>Followed protocols and completed precise documentation.</li>
-              <li>Collaborated with paramedics and firefighters to coordinate response.</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>EMT‑B/Firefighter — Augusta Fire Department • Augusta, GA</h3>
-            <div class="meta">Jan 2017 – Mar 2018</div>
-            <ul>
-              <li>Executed search/rescue and suppression while adhering to safety procedures.</li>
-              <li>Conducted equipment inspections and readiness checks; documented maintenance.</li>
-              <li>Operated effectively within command structure during dynamic incidents.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="military">
-        <div class="section">
-          <div class="kicker">Military</div>
-          <p><strong>Electrical Equipment Technician, U.S. Marine Corps</strong> — Camp Lejeune, NC (Honorable Discharge)</p>
-          <ul>
-            <li>Diagnosed and repaired electrical/power systems using technical manuals and schematics.</li>
-            <li>Followed lock‑out/tag‑out and safety protocols; maintained accurate maintenance logs.</li>
-            <li>Supported small‑team operations and adapted quickly to changing mission needs.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="additional">
-        <div class="section">
-          <div class="kicker">Additional</div>
-          <p>U.S. Work Authorization • Willing to relocate • Clean driving record</p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>© <span id="year"></span> Patrick Earnest • Last updated: <span id="updated"></span></p>
-    </footer>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">SE</span> Shawn Earnest</a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#work">Selected work</a>
+      <a href="#skills">Skills</a>
+    </nav>
   </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <p class="label">IT support &amp; cybersecurity</p>
+      <h1 id="hero-title">Shawn<br>Earnest</h1>
+      <p class="intro">I like figuring out how things work, why they break, and what it takes to get people back up and running.</p>
+      <div class="actions">
+        <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+        <a class="button secondary" href="./resume.pdf" download>Download résumé (PDF)</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/patrick-earnest-170aba285/">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="graphic">
+      <svg viewBox="0 0 420 300" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M24 0H0V24" fill="none" stroke="#446276" stroke-opacity=".33"/>
+          </pattern>
+        </defs>
+        <rect width="420" height="300" fill="url(#grid)"/>
+        <path d="M74 78h67l69 72h70l66-72M74 222h67l69-72 71 72h65M210 150V41m0 109v109" fill="none" stroke="#5b9a97" stroke-width="2"/>
+        <circle cx="210" cy="150" r="47" fill="#122e33" stroke="#83f5ce" stroke-opacity=".55"/>
+        <circle cx="210" cy="150" r="34" fill="#0f242a" stroke="#83f5ce"/>
+        <path d="m195 151 10 10 19-21" fill="none" stroke="#83f5ce" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#101c28" stroke="#83f5ce" stroke-width="2">
+          <circle cx="74" cy="78" r="7"/><circle cx="346" cy="78" r="7"/>
+          <circle cx="74" cy="222" r="7"/><circle cx="346" cy="222" r="7"/>
+          <circle cx="210" cy="41" r="5"/><circle cx="210" cy="259" r="5"/>
+        </g>
+      </svg>
+      <figcaption>Technical support · Networking · Security</figcaption>
+    </figure>
+  </section>
 
-  <script>
-    // Set year + a simple last-updated timestamp
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('updated').textContent = new Date().toLocaleDateString();
+  <section id="about" class="section split" aria-labelledby="about-title">
+    <div>
+      <p class="label">01 / About</p>
+      <h2 id="about-title">A bit about me</h2>
+    </div>
+    <div>
+      <p>I’m a Marine Corps veteran with a bachelor’s degree in cybersecurity from Southern New Hampshire University. My background spans equipment repair, emergency services, and IT support. I enjoy hands-on work, especially when I can solve a problem for someone and explain what happened in plain language.</p>
+      <p>My résumé and LinkedIn profile are under Patrick Earnest.</p>
+      <p>Outside of work, I build PCs and experiment with Windows and Linux in my home lab. I’m especially interested in incident response and digital forensics because I like piecing together what happened from a few clues.</p>
+    </div>
+  </section>
 
-    // Theme toggle: light/dark by flipping a data attribute
-    const btn = document.getElementById('themeBtn');
-    let dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const apply = () => document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-    apply();
-    btn.addEventListener('click', () => { dark = !dark; apply(); });
-  </script>
+  <section id="work" class="section" aria-labelledby="work-title">
+    <p class="label">02 / Selected work</p>
+    <h2 id="work-title">Work and projects</h2>
+    <article class="feature">
+      <div>
+        <p class="label">Professional experience</p>
+        <h3>Wingate Massage</h3>
+        <p>IT Lead · July 2024 to May 2026</p>
+      </div>
+      <ul class="list">
+        <li>Built the business’s website and ran security audits.</li>
+        <li>Managed Microsoft 365 and helped staff regain access to Outlook.</li>
+        <li>Improved the office Wi-Fi and set up a Windows 11 kiosk.</li>
+      </ul>
+    </article>
+    <div class="projects">
+      <article class="card">
+        <p class="label">Home lab · PowerShell · Windows</p>
+        <h3>Technician Toolkit v2.7.0</h3>
+        <p>I built a PowerShell toolkit for Windows repair, software installation, and disk migration. Service Job Mode tracks an issue from intake to resolution and collects system snapshots and logs.</p>
+        <details>
+          <summary>See an example service workflow</summary>
+          <p><strong>Illustrative example:</strong> A Windows workstation starts slowly.</p>
+          <ol class="list">
+            <li>Record the issue and capture a system snapshot.</li>
+            <li>Run diagnostics and collect logs during the service job.</li>
+            <li>Compare before-and-after snapshots and document the resolution.</li>
+          </ol>
+        </details>
+        <a class="button" href="./Technician-Toolkit-v2.7.0.zip" download>Download Technician Toolkit (ZIP)</a>
+      </article>
+      <article class="card">
+        <p class="label">Coursework</p>
+        <h3>Multi-floor office network</h3>
+        <p>Used Cisco Packet Tracer to model a multi-floor office network. My networking labs included VLANs, routing, DHCP, and access control lists.</p>
+      </article>
+    </div>
+    <article class="card project-detail">
+      <p class="label">Coursework · CYB 400 · OpenVAS</p>
+      <h3>Vulnerability Assessment</h3>
+      <p>I reviewed an OpenVAS scan report and grouped the findings into a remediation plan. I recommended fixing weak TLS settings during routine maintenance, addressing default credentials through a policy update, and scheduling upgrades for outdated server software.</p>
+    </article>
+    <article class="card project-detail">
+      <h3>IT &amp; Cybersecurity Coursework</h3>
+      <p>Six projects covering network troubleshooting, system administration, automation, and security assessment.</p>
+      <ul class="list">
+        <li>Network Troubleshooting and File Access Controls</li>
+        <li>Windows Account Administration</li>
+        <li>Linux Automation and Certificates</li>
+        <li>MySQL Database and Reporting</li>
+        <li>Enterprise Security Design and Planning</li>
+        <li>Vulnerability Assessment</li>
+      </ul>
+      <a class="button" href="./IT_Portfolio_Selected_Projects.zip" download>Download Project Files (ZIP)</a>
+    </article>
+  </section>
+
+  <section id="skills" class="section" aria-labelledby="skills-title">
+    <p class="label">03 / Skills</p>
+    <h2 id="skills-title">What I work with</h2>
+    <div class="skills">
+      <article class="card">
+        <h3>IT support</h3>
+        <p>Windows 10 and 11, Microsoft 365, Outlook, PC hardware, and Wi-Fi troubleshooting.</p>
+      </article>
+      <article class="card">
+        <h3>Systems and scripting</h3>
+        <p>Active Directory, virtual machines, Linux, PowerShell, and Bash.</p>
+      </article>
+      <article class="card">
+        <h3>Security and networking labs</h3>
+        <p>Wireshark, Nmap, OpenVAS, Cisco Packet Tracer, and vulnerability scanning.</p>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap bar">
+    <span>Shawn Earnest · Augusta, Georgia</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
 </body>
 </html>
-
